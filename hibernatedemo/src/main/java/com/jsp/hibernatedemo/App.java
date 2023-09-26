@@ -1,5 +1,6 @@
 package com.jsp.hibernatedemo;
 
+
 import com.jsp.hibernatedemo.dto.Student;
 
 import jakarta.persistence.EntityManager;
@@ -7,24 +8,23 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
     public static void main( String[] args )
     {
-        //EntityManagerFactory createEntityManagerFactory = Persistence.createEntityManagerFactory("development");
+        System.out.println("Main Starts");
+       
         saveStudentData();
+        System.out.println("Main Ends");
     }
     public static void saveStudentData() {
         
         Student student1 =new Student();
-        student1.setStudentID(004);
-        student1.setStudentName("Gokul");
-        student1.setStudentEmail("suren7219@gmail.com");
-        student1.setAddress("chennai");
+        student1.setStudentID(006);
+        student1.setStudentName("Mani");
+        student1.setStudentEmail("mani@gmail.com");
+        student1.setAddress("Banglore");
         
         // jpa code here
         
@@ -37,5 +37,6 @@ public class App
         entitytTransaction.commit();
         
     }
+   
 }
  
