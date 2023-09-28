@@ -31,7 +31,7 @@ public class EmployeeDao {
 		   
 		   EntityManagerFactory EntityManagerFactory = Persistence.createEntityManagerFactory("development");
 	        EntityManager manager = EntityManagerFactory.createEntityManager();
-	        EntityTransaction entitytTransaction = manager.getTransaction();
+	        //EntityTransaction entitytTransaction = manager.getTransaction();
 	        
 		   Employee emp = manager.find(Employee.class,primarykey);
 		   System.out.println(emp.getEmpid()+" "+emp.getEmpName()+" "+emp.getEmpAddress());
