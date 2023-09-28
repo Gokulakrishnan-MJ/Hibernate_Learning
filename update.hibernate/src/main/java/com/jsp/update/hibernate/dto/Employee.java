@@ -2,10 +2,14 @@ package com.jsp.update.hibernate.dto;
 
 import java.io.Serializable;
 
+import javax.annotation.processing.Generated;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Persistence;
 
@@ -13,6 +17,8 @@ import jakarta.persistence.Persistence;
 public class Employee implements Serializable{
 		
 		@Id 
+		// to auto generate id follow the following syntax 
+		//@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private int empid;
 		private String empName;
 		private String empAddress;

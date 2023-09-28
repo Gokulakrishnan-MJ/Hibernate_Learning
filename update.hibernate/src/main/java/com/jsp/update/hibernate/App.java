@@ -1,5 +1,6 @@
 package com.jsp.update.hibernate;
 
+import com.jsp.update.hibernate.dao.deleteRecord;
 import com.jsp.update.hibernate.dao.insert;
 import com.jsp.update.hibernate.dao.update;
 
@@ -14,7 +15,8 @@ public class App
     	
     	System.out.println("Program Starts");
         //insert.inserdata();
-    	update.updatedata(3,"James Bond");
+    	//update.updatedata(4,"Bond");
+    	deleteRecord.delete(3);
         System.out.println("Program Ends");
     }
 }
