@@ -64,7 +64,7 @@ public class update {
 		}
 		case 4: {
 			System.out.println("Enter the New Phone Number : ");
-			BigInteger newNo = sc.nextBigInteger();
+			long newNo = sc.nextLong();
 			transaction.begin();
 			emp.setPhno(newNo);
 			transaction.commit();

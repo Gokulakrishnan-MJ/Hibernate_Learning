@@ -17,7 +17,7 @@ public class Employee implements Serializable{
 	private String Name;
 	private String Dept;
 	private String Address;
-	private BigInteger phno;
+	private long phno;
 	
 	
 	// getters and setters
@@ -45,10 +45,10 @@ public class Employee implements Serializable{
 	public void setAddress(String address) {
 		Address = address;
 	}
-	public BigInteger getPhno() {
+	public long getPhno() {
 		return phno;
 	}
-	public void setPhno(BigInteger phno) {
+	public void setPhno(long phno) {
 		this.phno = phno;
 	}
 	
