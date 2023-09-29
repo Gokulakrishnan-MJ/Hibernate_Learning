@@ -1,4 +1,4 @@
-package com.jsp.hibernatedemo;
+package com.jsp.CrudApplication;
 
 import static org.junit.Assert.assertTrue;
 
