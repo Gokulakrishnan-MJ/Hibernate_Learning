@@ -17,16 +17,18 @@ public class App
     	Scanner sc=new Scanner(System.in);
         System.out.println( "Welcome to Employee Management System" );
         System.out.println();  
-        int choice=0;
-        while(choice!=-1)
+        boolean loop=true;
+        int Choice;
+        while(loop)
         {
+        	
         	System.out.println("1 : Insert Employee Record");
         	System.out.println("2 : Update Employee Data");
         	System.out.println("3 : Delete Employee Record");
         	System.out.println("4 : EXIT");
         	System.out.print("Enter Your Choice :");
-        	choice=sc.nextInt();
-        	switch(choice)
+        	Choice=sc.nextInt();
+        	switch(Choice)
         	{
         	case 1:
         	{
@@ -49,10 +51,17 @@ public class App
         	case 4:
         	{
         		System.out.println("Exiting Application...");
-        		choice=-1;
+        		loop=false;
+        		break;
         	}
+        	default :
+        	{
+        		System.out.println("enter a valid choice");
         	}
+        	} 
+        	System.out.println("-----------------------------------------------------------------------------------------------------");
+        	   
         	
         }
-    }
+        sc.close();        }
 }

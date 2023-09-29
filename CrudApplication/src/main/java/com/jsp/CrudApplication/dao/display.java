@@ -13,8 +13,7 @@ public class display {
 
 	public static void displayRecord() {
 		Scanner sc=new Scanner(System.in);
-		int choice=0;
-		do {
+		
 		System.out.print("Enter EmployeeId : ");
 		int empid=sc.nextInt();
 		
@@ -23,15 +22,14 @@ public class display {
 		
 		
 		Employee emp =manager.find(Employee.class,empid); 
+		
 		System.out.println("Employee ID      : "+emp.getEmployeeId());
 		System.out.println("Employee Name    : "+emp.getName());
 		System.out.println("Employee Dept    : "+emp.getDept());
 		System.out.println("Employee Address : "+emp.getAddress());
 		System.out.println("Employee phno    : "+emp.getPhno());
 		
-		System.out.println("To Display Another Record enter 1 else Enter 0 :");
-		choice= sc.nextInt();
-		}while(choice==1);
+		
 	}
 
 }

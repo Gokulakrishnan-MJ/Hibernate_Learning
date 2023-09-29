@@ -15,11 +15,9 @@ public class insert {
 	{
 		//Scanner instance
 		Scanner sc=new Scanner(System.in);
-		int Choice = 1;
 		
-		while(Choice==1)
-		{
-		//Employee instancee
+		
+		//Employee instance
 		Employee emp=new Employee();
 		
 		//user inputs
@@ -42,10 +40,8 @@ public class insert {
 		manager.persist(emp);
 		transaction.commit();
 		
-		System.out.println("To insert Another Record enter 1 else Enter 0 :");
-		Choice= sc.nextInt();
-		}
-		sc.close();
+		
+		
 	}
 
 }
