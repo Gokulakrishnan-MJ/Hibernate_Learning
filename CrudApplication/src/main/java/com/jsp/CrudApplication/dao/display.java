@@ -21,12 +21,15 @@ public class display {
 		EntityManager manager = factory.createEntityManager();
 
 		Employee emp = manager.find(Employee.class, empid);
-
+		System.out.println("------------------------------------------------");
+		System.out.println("");
 		System.out.println("Employee ID      : " + emp.getEmployeeId());
 		System.out.println("Employee Name    : " + emp.getName());
 		System.out.println("Employee Dept    : " + emp.getDept());
 		System.out.println("Employee Address : " + emp.getAddress());
 		System.out.println("Employee phno    : " + emp.getPhno());
+		System.out.println("");
+		System.out.println("------------------------------------------------");
 
 	}
 

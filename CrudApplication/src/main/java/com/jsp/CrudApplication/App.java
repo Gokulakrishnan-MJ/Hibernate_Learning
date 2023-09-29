@@ -3,6 +3,7 @@ package com.jsp.CrudApplication;
 import java.util.Scanner;
 
 import com.jsp.CrudApplication.dao.delete;
+import com.jsp.CrudApplication.dao.display;
 import com.jsp.CrudApplication.dao.insert;
 import com.jsp.CrudApplication.dao.update;
 
@@ -22,7 +23,8 @@ public class App {
 			System.out.println("1 : Insert Employee Record");
 			System.out.println("2 : Update Employee Data");
 			System.out.println("3 : Delete Employee Record");
-			System.out.println("4 : EXIT");
+			System.out.println("4 : Display a REcord");
+			System.out.println("5 : EXIT");
 			System.out.print("Enter Your Choice :");
 			Choice = sc.nextInt();
 			switch (Choice) {
@@ -41,7 +43,13 @@ public class App {
 				System.out.println("Delete Operation performed Successfully...");
 				break;
 			}
-			case 4: {
+			case 4:
+			{
+				display.displayRecord();
+				System.out.println("Display operation Performed Successfully");
+				break;
+			}
+			case 5: {
 				System.out.println("Exiting Application...");
 				loop = false;
 				break;
