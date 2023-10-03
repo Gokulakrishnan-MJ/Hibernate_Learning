@@ -6,10 +6,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.jsp</groupId>
-	<artifactId>update.hibernate</artifactId>
+	<artifactId>JPA-LifeCycle</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>update.hibernate</name>
+	<name>JPA-LifeCycle</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
@@ -26,7 +26,6 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
