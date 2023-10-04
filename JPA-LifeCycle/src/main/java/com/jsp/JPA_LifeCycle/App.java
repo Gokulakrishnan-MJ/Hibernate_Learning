@@ -1,5 +1,6 @@
 package com.jsp.JPA_LifeCycle;
 
+import com.jsp.JPA_LifeCycle.dao.ProductDao;
 import com.jsp.JPA_LifeCycle.dao.ProductInterface;
 import com.jsp.JPA_LifeCycle.dto.*;
 
@@ -16,7 +17,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        product p=new product();
+    	ProductDao p1=new ProductDao();
+       	p1.saveProduct();
         
     }
 }
