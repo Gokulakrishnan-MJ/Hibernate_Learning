@@ -9,35 +9,22 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 
-public class ProductDao {
+public class ProductDao implements ProductInterface {
 
-	public static void saveProduct() {
+	public void saveProduct() {
 
-		// JPA Steps Starts Here
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("development");
-		EntityManager manager = factory.createEntityManager();
-		EntityTransaction transaction = manager.getTransaction();
-		// JPA Steps Ends Here
-
-		// JPA is in new/Transient State whenever the instance of the Product.class
 		product p = new product();
 
 		transaction.begin();
 		// JPA is in Managed State
 		manager.persist(p);
 		transaction.commit();
- 
+
 	}
 
-	public static void removeProduct() {
+	public void removeProduct() {
 
-		// JPA Steps Starts Here
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("development");
-		EntityManager manager = factory.createEntityManager();
-		EntityTransaction transaction = manager.getTransaction();
-		// JPA Steps Ends Here
-
-		// JPA is in new/Transient State whenever the instance/object of the Product.class is created
+	
 		product p = new product();
 
 		// JPA is in Removed State
@@ -45,11 +32,19 @@ public class ProductDao {
 		transaction.commit();
 
 	}
-	
+
 	public static void clearManager() {
+
 		
-		
-		
+	
+
+		// JPA is in Detached State
+		manager.clear();// it will clear all the object reference present in persistence context
+		manager.close();// it will close the persistence context
+
+		// JPA is in Detached State
+		// factory.close(); //it will close the EntityManagerFactory
+		// NOTE : EntityManagerFactory is responsible for the Connection of the Database
 	}
 
 }

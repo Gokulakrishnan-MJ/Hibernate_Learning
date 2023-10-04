@@ -1,5 +1,8 @@
 package com.jsp.JPA_LifeCycle;
 
+import com.jsp.JPA_LifeCycle.dao.ProductInterface;
+import com.jsp.JPA_LifeCycle.dto.*;
+
 /**
  * JPA - Java Persistence API
  * it is an API which Facilitates Object Relational Mapping using Java Objects instead of SQL Queries
@@ -13,6 +16,7 @@ public class App
 {
     public static void main( String[] args )
     {
+        product p=new product();
         
     }
 }
