@@ -21,7 +21,7 @@ public class Person implements Serializable {
 	//one-to-one relationship
 
 	@OneToOne
-	Aadhar aadhar;
+	private Aadhar aadhar;
 
 	public int getPersonId() {
 		return personId;
