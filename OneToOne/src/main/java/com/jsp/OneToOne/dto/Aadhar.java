@@ -19,9 +19,7 @@ public class Aadhar implements Serializable {
 	public int getAadharID() {
 		return aadharID;
 	}
-	public void setAadharID(int aadharID) {
-		this.aadharID = aadharID;
-	}
+
 	public long getAadharNumber() {
 		return aadharNumber;
 	}
