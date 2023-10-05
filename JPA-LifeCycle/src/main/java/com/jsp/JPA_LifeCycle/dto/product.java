@@ -2,8 +2,13 @@ package com.jsp.JPA_LifeCycle.dto;
 
 import java.io.Serializable;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class product implements Serializable {
 	
+	@Id
 	private int ProductId;
 	private String ProductName;
 	private int ProductPrice;
