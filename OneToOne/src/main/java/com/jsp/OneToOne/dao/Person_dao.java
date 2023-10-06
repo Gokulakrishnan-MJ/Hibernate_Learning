@@ -16,7 +16,7 @@ public class Person_dao implements DaoInterface{
 		transaction.begin();
 		manager.persist(person);
 		transaction.commit();
-		System.out.println("Insertion Successful");
+		System.out.println("----------------------------------Insertion Successful--------------------------------------------");
 	}
 	public static void UpdatePerson()
 	{
@@ -27,6 +27,7 @@ public class Person_dao implements DaoInterface{
 		transaction.begin();
 		manager.persist(person);
 		transaction.commit();	
+		System.out.println("----------------------------------Update Successfull-----------------------------------------------");
 	}
 	public static void deletePerson() {
 		int id=UserInput.PersonId();
@@ -36,12 +37,12 @@ public class Person_dao implements DaoInterface{
 		transaction.begin();
 		manager.remove(person);
 		transaction.commit();
-		System.out.println("Person Deleted Successfully");
+		System.out.println("------------------------------Person Deleted Successfully-------------------------------------------");
 	}
 	public static void displayPerson() {
 		int id=UserInput.PersonId();
 		Person person=manager.find(Person.class,id);
-		
+		System.out.println("-------------------------------------Person Details----------------------------------------------");
 		System.out.println("Name    : "+person.getPersonName());
 		System.out.println("Email   : "+person.getPersonEmail());
 		System.out.println("Contact : "+person.getPersonPhoneNo());

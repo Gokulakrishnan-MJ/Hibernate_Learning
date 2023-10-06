@@ -10,7 +10,7 @@ public class Aadhar_dao implements DaoInterface{
 		transaction.begin();
 		manager.persist(aadhar);
 		transaction.commit();
-		System.out.println("Aadhar insertion successful");
+		System.out.println("------------------------------Aadhar insertion successful---------------------------------------");
 		return aadhar;
 	}
 	public static void UpdateAadhar() {
@@ -21,13 +21,13 @@ public class Aadhar_dao implements DaoInterface{
 		transaction.begin();
 		manager.persist(aadhar);
 		transaction.commit();
-		System.out.println("Aadhar updated Successfully");
+		System.out.println("------------------------------Aadhar updated Successfully----------------------------------------");
 	}
 	public static void deleteAadhar(Aadhar aadhar) {
 		transaction.begin();
 		manager.remove(aadhar);
 		transaction.commit();
-		System.out.println("Aadhar deleted Successfully");
+		System.out.println("------------------------------Aadhar deleted Successfully-----------------------------------------");
 		
 	}
 	public static void displayAadhar(Aadhar aadhar)
