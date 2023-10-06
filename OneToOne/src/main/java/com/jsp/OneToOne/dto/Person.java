@@ -17,7 +17,6 @@ public class Person implements Serializable {
 	private String personName;
 	private String personEmail;
 	private long personPhoneNo;
-	private boolean display = true;
 	
 	//one-to-one relationship
 
@@ -59,12 +58,6 @@ public class Person implements Serializable {
 	public void setAadhar(Aadhar a) {
 		this.aadhar = a;
 	}
-	public void setDisplay(boolean display) {
-		this.display = display;
-	}
-	public boolean getDisplay()
-	{
-		return display;
-	}
+	
 	
 }

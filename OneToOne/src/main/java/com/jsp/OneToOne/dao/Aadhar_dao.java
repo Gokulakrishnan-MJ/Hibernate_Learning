@@ -10,6 +10,7 @@ public class Aadhar_dao implements DaoInterface{
 		transaction.begin();
 		manager.persist(aadhar);
 		transaction.commit();
+		System.out.println("Aadhar insertion successful");
 		return aadhar;
 	}
 	public static void UpdateAadhar() {
@@ -20,8 +21,20 @@ public class Aadhar_dao implements DaoInterface{
 		transaction.begin();
 		manager.persist(aadhar);
 		transaction.commit();
+		System.out.println("Aadhar updated Successfully");
 	}
-	
-
+	public static void deleteAadhar(Aadhar aadhar) {
+		transaction.begin();
+		manager.remove(aadhar);
+		transaction.commit();
+		System.out.println("Aadhar deleted Successfully");
+		
+	}
+	public static void displayAadhar(Aadhar aadhar)
+	{
+		System.out.println("Aadhar Number : "+aadhar.getAadharNumber());
+		System.out.println("Aadhar Issued Date :"+aadhar.getIssueDate());
+		System.out.println("Aadhar issueing Authority :"+aadhar.getIssuningAuthority());
+	}
 	
 }
