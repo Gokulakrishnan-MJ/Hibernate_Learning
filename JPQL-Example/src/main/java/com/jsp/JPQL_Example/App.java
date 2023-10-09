@@ -12,6 +12,7 @@ public class App
     {
         System.out.println( "Hello World!" );
         //Student_dao.insert();
+        Student_dao.displayStudents();
         Student_dao.displayTable();
         Student_dao.Sorting();
     }

@@ -10,19 +10,11 @@ public class Student_dao implements DaoInterface{
 	
 	public static void insert() {
 		
-		Student student=new Student();
-		student.setStudentName("G.hari");
-		student.setStudentDept("IT");
-		student.setStudentBatch("2022");
-		student.setStudentPhNo(80727685);
-		student.setTotalMarks(440);
-		transaction.begin();
-		manager.persist(student);
-		transaction.commit();
+		
 		
 		
 	}
-	public static void displayNames()
+	public static void displayStudents()
 	{
 		Query query = manager.createQuery("select s.studentName from Student s");
 		List<String> list=query.getResultList();

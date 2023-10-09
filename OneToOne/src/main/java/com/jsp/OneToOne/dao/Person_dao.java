@@ -3,6 +3,7 @@ package com.jsp.OneToOne.dao;
 import com.jsp.OneToOne.dto.Aadhar;
 
 import com.jsp.OneToOne.dto.Person;
+import com.jsp.OneToOne.dao.DaoInterface;
 
 public class Person_dao implements DaoInterface{
 

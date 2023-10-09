@@ -1,4 +1,4 @@
-package com.jsp.OneToOne.dao;
+package com.jsp.OneToOne_UserBirthCertificate.dao;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
