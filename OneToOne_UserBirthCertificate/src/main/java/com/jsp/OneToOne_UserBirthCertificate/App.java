@@ -18,7 +18,7 @@ public class App
         	System.out.println("3.Remove User");
         	System.out.println("4.Display User");
         	System.out.println("0.Exit");
-        	
+        	System.out.print("Enter Your choice :");
         	int choice =sc.nextInt();
         	switch(choice)
         	{
@@ -36,6 +36,7 @@ public class App
         		break;
         	case 0:
         		loop=false;
+        		System.out.println("Exiting Application..............");
         		break;
         	default:
         		System.out.println("Enter Valid Choice");
