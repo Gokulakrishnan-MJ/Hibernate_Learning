@@ -7,7 +7,7 @@ public class Bank implements DaoInterface {
 	public static void addBank() {
 		BankDto bank = new BankDto();
 
-		UserInput.addBank(bank);
+		bank=UserInput.addBank(bank);
 		transaction.begin();
 		manager.persist(bank);
 		transaction.commit();
@@ -29,10 +29,19 @@ public class Bank implements DaoInterface {
 		int id = UserInput.getId();
 		BankDto bank = manager.find(BankDto.class, id);
 		transaction.begin();
-		Users.removeUsers(id);
 		manager.remove(bank);
 		transaction.commit();
 		System.out.println("Bank Updated Successfully");
+	}
+	public static void display()
+	{
+		int id=UserInput.getId();
+		BankDto bank = manager.find(BankDto.class, id);
+		System.out.println("Branch ID : "+bank.getBankId());
+		System.out.println("IFSC Code"+bank.getIfscCode());
+		System.out.println("Manager Name :"+bank.getManagerName());
+		System.out.println("Locaction :"+bank.getLocation());
+		
 	}
 
 }
