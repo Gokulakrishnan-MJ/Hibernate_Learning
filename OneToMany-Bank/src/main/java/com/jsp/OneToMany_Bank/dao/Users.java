@@ -9,10 +9,12 @@ public class Users implements DaoInterface{
 	public static void addUser()
 	{
 		UsersDto users=new UsersDto();
-		UserInput.addUser(users);
+		users=UserInput.addUser(users);
 		transaction.begin();
 		manager.persist(users);
 		transaction.commit();
+		int id=UserInput.getId();
+		
 		System.out.println("user updated Successfully");
 		
 	}
