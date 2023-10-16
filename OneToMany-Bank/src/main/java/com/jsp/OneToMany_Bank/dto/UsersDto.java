@@ -1,5 +1,6 @@
 package com.jsp.OneToMany_Bank.dto;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,6 +13,7 @@ public class UsersDto {
 	private String userName;
 	private String userAccNo;
 	private String userPhno;
+	@Column(name = "Address")
 	private String userAddress;
 	public int getUserId() {
 		return userId;
@@ -43,6 +45,11 @@ public class UsersDto {
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
 	} 
+	@Override
+	public String toString() {
+		return "User AccNO :"+this.userAccNo+"\nUser Name :"+this.userName+"\nUser Address :"+this.userAddress+"\nUser Address :"+this.userAddress;
+		
+	}
 	
 	
 
