@@ -3,6 +3,7 @@ package com.jsp.ManyToManyOnlineShoppingPlatform.dao;
 import java.util.Scanner;
 
 import com.jsp.ManyToManyOnlineShoppingPlatform.dto.EcommerceDto;
+import com.jsp.ManyToManyOnlineShoppingPlatform.dto.ProductDto;
 
 public class UserInput {
 	static Scanner sc=new Scanner(System.in);
@@ -19,7 +20,20 @@ public class UserInput {
 		ecommerce.setHeadquarters(sc.next());
 		System.out.println("Enter the Payment Partner :");
 		ecommerce.setPaymentPartner(sc.next());
-		return null;
+		return ecommerce;
+	}
+	public static ProductDto addProduct(ProductDto product)
+	{
+		System.out.println("Enter the ProductName :");
+		product.setProductName(sc.next());
+		System.out.println("Enter the BrandName :");
+		product.setBrand(sc.next());
+		System.out.println("Enter the Price :");
+		product.setPrice(sc.nextInt());
+		System.out.println("Enter the SellerName");
+		product.setSeller(sc.next());
+		
+		return product;
 	}
 
 }
