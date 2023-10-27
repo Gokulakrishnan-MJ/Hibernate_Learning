@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 
 @Entity
@@ -18,7 +19,8 @@ public class BankDto {
 	private String ifscCode;
 	private String location;
 	
-	@OneToMany
+	@OneToMany(mappedBy = "bank ")
+	
 	private List<UsersDto> users;
 
 	public int getBankId() {

@@ -13,9 +13,9 @@ public class App
 {
     public static void main( String[] args )
     {
-    	//Bank.addBank();
+    	Bank.addBank();
     	//Bank.updateBank();
-    	Bank.display();
+    	//Bank.display();
     
     
     }

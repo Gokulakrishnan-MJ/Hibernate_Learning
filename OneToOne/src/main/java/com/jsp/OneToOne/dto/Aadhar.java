@@ -1,4 +1,4 @@
-package com.jsp.OneToOne.dto;
+vpackage com.jsp.OneToOne.dto;
 
 import java.io.Serializable;
 
